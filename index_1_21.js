@@ -41,8 +41,13 @@ console.log(findBiggerNumber([1, 2, 4, 5, 14, 15]));
 
 
 // Given an array of strings, return the first string with length greater than 4 or undefined if no such string is found
+function findString(arr) {
+    return arr.find((str) => str.length > 4);
 
 
+}
+console.log(findString(["Hell", "Lotto", "Cat"]));
+console.log(findString(["Player", "Gametime", "Baller"]));
 
 // Given an array of Objects and a target id return the first object that matches the id or undefined if no such object is found
 // Expected Structure of a SINGLE object - 
