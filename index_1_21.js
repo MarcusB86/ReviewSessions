@@ -9,12 +9,13 @@
 // Given ab array of numbers and a given target. return the target if it's in the array or undefined if it's not
 function returnTarget(arr, target) {
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === target) {
-            return target;
-        }
-    }
-    return undefined;
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] === target) {
+    //         return target;
+    //     }
+    // }
+    // return undefined;
+    return arr.find(num => num === target);
    
 }
 const myArray = [2,4,6,8,10];
@@ -24,7 +25,15 @@ console.log(result);
 
 
 // Given an array of numbers, return the first number that's bigger than 14 or undefined if no number is bigger than 14
-
+// function findBiggerNumber(arr) {
+//     let number = 0;
+//     for (let i = 0; i < arr.length) {
+//         if (arr[i] > 14) {
+//             return number;
+//         }
+//     }
+//     return undefined;
+// }
 
 
 // Given an array of strings, return the first string with length greater than 4 or undefined if no such string is found
