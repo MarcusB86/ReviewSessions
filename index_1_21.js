@@ -25,15 +25,19 @@ console.log(result);
 
 
 // Given an array of numbers, return the first number that's bigger than 14 or undefined if no number is bigger than 14
-// function findBiggerNumber(arr) {
-//     let number = 0;
-//     for (let i = 0; i < arr.length) {
-//         if (arr[i] > 14) {
-//             return number;
-//         }
-//     }
-//     return undefined;
-// }
+function findBiggerNumber(arr) {
+    // for (let num of arr) {
+    //     if (num > 14) {
+    //         return num;
+    //     }
+    // }
+    // return undefined;
+    return arr.find((num) => num > 14);
+
+}
+console.log(findBiggerNumber([9,12,5,7,8]));
+console.log(findBiggerNumber([9, 6, 3, 1]));
+console.log(findBiggerNumber([1, 2, 4, 5, 14, 15]));
 
 
 // Given an array of strings, return the first string with length greater than 4 or undefined if no such string is found
