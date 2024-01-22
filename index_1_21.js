@@ -51,7 +51,20 @@ console.log(findString(["Player", "Gametime", "Baller"]));
 
 // Given an array of Objects and a target id return the first object that matches the id or undefined if no such object is found
 // Expected Structure of a SINGLE object - 
+
+function matchID(arr, targetId) {
+//     let obj = [];
+// for (let i = 0; i < arr.length; i++) {
+//     if (obj.id === targetId) {
+//         return obj;
+//     }
+//  }
+//  return undefined;
+return arr.find(obj => obj.id === targetId);
+}
+
 /*
+
 {
  id: "Y42C_a",
  name: "Robert",
@@ -67,3 +80,6 @@ console.log(findString(["Player", "Gametime", "Baller"]));
  name: "Robert"
 }
 */
+function findName(arr, targetId) {
+    return arr.find(obj => obj.name === targetId);
+}
