@@ -53,13 +53,11 @@ console.log(findString(["Player", "Gametime", "Baller"]));
 // Expected Structure of a SINGLE object - 
 
 function matchId(arr, targetId) {
-//     let obj = [];
-// for (let i = 0; i < arr.length; i++) {
+// for (let obj of arr) {
 //     if (obj.id === targetId) {
 //         return obj;
 //     }
-//  }
-//  return undefined;
+// }
 return arr.find(obj => obj.id === targetId);
 }
 const newArray = [
@@ -77,6 +75,7 @@ const newArray = [
   
   console.log(matchId(newArray,"R24G_e"));
   console.log(matchId(newArray,"152r"));
+  console.log(matchId(newArray,"N47K_i"));
   
 /*
 
@@ -96,10 +95,20 @@ const newArray = [
 }
 */
 function findName(arr, targetId) {
+    // for (let obj of arr) {
+    //     if (obj.id === targetId) {
+    //         return {
+    //             name : obj.name
+    //         };
+    //     }
+    // }
+    
     let obj = arr.find(obj => obj.id === targetId);
     return {
         name: obj.name
     }
 }
 console.log(findName(newArray, "R24G_e"));
+console.log(findName(newArray, "K82J_h"));
 console.log(findName(newArray, "M36I_g"));
+console.log(findName(newArray, "P58F_d"));
