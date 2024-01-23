@@ -52,7 +52,7 @@ console.log(findString(["Player", "Gametime", "Baller"]));
 // Given an array of Objects and a target id return the first object that matches the id or undefined if no such object is found
 // Expected Structure of a SINGLE object - 
 
-function matchID(arr, targetId) {
+function matchId(arr, targetId) {
 //     let obj = [];
 // for (let i = 0; i < arr.length; i++) {
 //     if (obj.id === targetId) {
@@ -62,7 +62,22 @@ function matchID(arr, targetId) {
 //  return undefined;
 return arr.find(obj => obj.id === targetId);
 }
-
+const newArray = [
+    { "id": "Y42C_a", "name": "Robert", "occupation": "Chef", "eyeColor": "green" },
+    { "id": "X91D_b", "name": "Alice", "occupation": "Engineer", "eyeColor": "brown" },
+    { "id": "Z73E_c", "name": "John", "occupation": "Teacher", "eyeColor": "blue" },
+    { "id": "P58F_d", "name": "Emily", "occupation": "Artist", "eyeColor": "hazel" },
+    { "id": "R24G_e", "name": "Michael", "occupation": "Doctor", "eyeColor": "gray" },
+    { "id": "L79H_f", "name": "Sophia", "occupation": "Writer", "eyeColor": "amber" },
+    { "id": "M36I_g", "name": "Daniel", "occupation": "Scientist", "eyeColor": "black" },
+    { "id": "K82J_h", "name": "Olivia", "occupation": "Developer", "eyeColor": "blue" },
+    { "id": "N47K_i", "name": "William", "occupation": "Athlete", "eyeColor": "green" },
+    { "id": "O15L_j", "name": "Emma", "occupation": "Musician", "eyeColor": "brown" }
+  ];
+  
+  console.log(matchId(newArray,"R24G_e"));
+  console.log(matchId(newArray,"152r"));
+  
 /*
 
 {
@@ -81,5 +96,10 @@ return arr.find(obj => obj.id === targetId);
 }
 */
 function findName(arr, targetId) {
-    return arr.find(obj => obj.name === targetId);
+    let obj = arr.find(obj => obj.id === targetId);
+    return {
+        name: obj.name
+    }
 }
+console.log(findName(newArray, "R24G_e"));
+console.log(findName(newArray, "M36I_g"));
