@@ -223,10 +223,42 @@ const dinos = [
   console.log(returnKeyValue(dinos[2],"meaningOfName"));
   // ------------------------------------------------------
   // 2. Given a dinosaur object and an mya (Millions of years ago) value, return a boolean indicating whether it was alive during that time or not
-//   function isDinoAlive(object, mya) {
-//     if (mya )
-//   }
+  function isDinoAlive(dino, mya) {
+    if (dino.mya.length === 1) {
+        return dino.mya[0] === mya || dino.mya[0] -1 === mya;
+       
+
+    } else {
+
+    // } (dino.mya.length === 2) {
+        if (mya >= dino.mya[1] && mya <= dino.mya[0]) {
+            
+        }
+    }
+  }
+
+  const dino1 = {
+    dinosaurId: "JIj72eqrz6",
+    name: "Spinosaurus",
+    pronunciation: "SPINE-oh-SORE-us",
+    meaningOfName: "spine lizard",
+    diet: "carnivorous",
+    lengthInMeters: 18,
+    period: "Early Cretaceous",
+    mya: [112, 97],
+    info: "Spinosaurus was one of the largest carnivorous dinosaurs to walk the Earth. Its diet consisted mostly of fish and the large spines on its back likely formed a sail.",
+  },
+
+  console.log(isDinoAlive(dino1,114))
+ 
+
    // If the dinosaur only has a single value for `mya`, they're considered alive if the `mya` value is equal to the given value or one less. For example, if a dinosaur has a `mya` value of `[29]`, the dinosaur's information will be returned if `29` is entered or `28` is entered.
   
   // ------------------------------------------------------
   // 3. Given an array of dinosaurs and a key return a new array where each dinosaur object is replaced with the corresponding value of a specified key within each object. If no key is given or a wrong key is given, return the dinosaurIds
+  function replaceDinoObject(obj,key) {
+    
+    for (let dino of dinos) {
+        if(dinos[key]
+    }
+  }
