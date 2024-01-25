@@ -211,11 +211,22 @@ const dinos = [
   ];
   
   // 1. Given a dinosaur object and a key return the value of the corresponding key in the object. If no key is provided return the dinosaurId
-  
+  function returnKeyValue(object, key) {
+    if (key) {
+        return object[key];
+    } else {
+        return object.dinosaurId;
+    }
+
+
+  }
+  console.log(returnKeyValue(dinos[2],"meaningOfName"));
   // ------------------------------------------------------
   // 2. Given a dinosaur object and an mya (Millions of years ago) value, return a boolean indicating whether it was alive during that time or not
-  
-  // If the dinosaur only has a single value for `mya`, they're considered alive if the `mya` value is equal to the given value or one less. For example, if a dinosaur has a `mya` value of `[29]`, the dinosaur's information will be returned if `29` is entered or `28` is entered.
+//   function isDinoAlive(object, mya) {
+//     if (mya )
+//   }
+   // If the dinosaur only has a single value for `mya`, they're considered alive if the `mya` value is equal to the given value or one less. For example, if a dinosaur has a `mya` value of `[29]`, the dinosaur's information will be returned if `29` is entered or `28` is entered.
   
   // ------------------------------------------------------
   // 3. Given an array of dinosaurs and a key return a new array where each dinosaur object is replaced with the corresponding value of a specified key within each object. If no key is given or a wrong key is given, return the dinosaurIds
