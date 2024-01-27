@@ -40,8 +40,26 @@ console.log(findElementCount(["apple", "orange", "apple", "banana", "apple", "or
 // ------------------------------------------------------------------------
 
 // 2. Write a function that takes an object and a property name (key), and returns the value of the property. If the property doesn't exist in the object return an error message
+//1. object, key
+//2. output/return value - the value or error if no value
 
 // YOUR CODE HERE
+function returnPropertyValue (obj, key) {
+    
+    if(obj[key]) {
+        //check if the property exists in the object by passing the key
+        return obj[key];
+        // if the property exist we return the value
+    } else {
+        return "not there";
+        // if it doesnt exist  we return an error message
+    }
+}
+
+return obj[key] ? obj[key] : "ERROORRRRRR" //Ternary
+return obj[key] || "ERROORRRR" // short circuiting
+console.log(returnPropertyValue({}, "name")
+console.log(returnPropertyValue({name: "Mayaan" }, "name"))
 
 // ------------------------------------------------------------------------
 
