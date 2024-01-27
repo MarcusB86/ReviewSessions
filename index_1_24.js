@@ -247,18 +247,24 @@ const dinos = [
     period: "Early Cretaceous",
     mya: [112, 97],
     info: "Spinosaurus was one of the largest carnivorous dinosaurs to walk the Earth. Its diet consisted mostly of fish and the large spines on its back likely formed a sail.",
-  },
+  }
 
-  console.log(isDinoAlive(dino1,114))
+//   console.log(isDinoAlive(dino1,114))
  
 
    // If the dinosaur only has a single value for `mya`, they're considered alive if the `mya` value is equal to the given value or one less. For example, if a dinosaur has a `mya` value of `[29]`, the dinosaur's information will be returned if `29` is entered or `28` is entered.
   
   // ------------------------------------------------------
   // 3. Given an array of dinosaurs and a key return a new array where each dinosaur object is replaced with the corresponding value of a specified key within each object. If no key is given or a wrong key is given, return the dinosaurIds
-  function replaceDinoObject(obj,key) {
-    
-    for (let dino of dinos) {
-        if(dinos[key]
-    }
+ function replaceDinoObject(dinosaurs, key) {
+    // const dinoArray = [];
+    // for (let dino of dinosaurs) {
+    //     let value = dino[key] || dino.dinosaurId;
+    //     replaceDinoObject.push(value);
+ 
+    // }
+    // return replaceDinoObject;
+    return dinosaurs.map((dino)=> dino[key] || dino.dinosaurId);
   }
+  console.log(replaceDinoObject(dinos, "name"));
+  console.log(replaceDinoObject(dinos, "pronunciation"));
