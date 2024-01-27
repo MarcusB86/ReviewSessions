@@ -1,18 +1,40 @@
  // 1. Write a function that takes in an array and returns an object where each element in the array is a key, and the values are the number of times each element appears in the array -
-
+// questions to ask ourselves while reading prompts.
+// 1. What are my inputs?
+// 2. What is my output?
+// 3. What are the steps i need to take to get from input to output > ---> pseudocode
 // YOUR CODE HERE
 function findElementCount(arr) {
-  
-     for (let obj of arr) {
+    let newObj = {};
+    // create an object to count the elements
+    
+    for (let key of arr) {
+        // create a for loop to access each element
         
         
-
+        if (newObj[key]) {
+            // check if the current element is already in the object
+            newObj[key]++; // obj[key] + 1
+            //if it is, increment its value by one
+            
+        } else {
+            newObj[key] = 1;
+            // if it isnt set/assign its value in the object to 1
+        }
+        console.log("key: ", key)
+        console.log("object: ", newObj)
+       
+        
+        
+        
+        
     }
     return newObj = {};
+    // return the object after the loop. 
 }
 
 // Example:
-// ["apple", "orange", "apple", "banana", "apple", "orange"]
+console.log(findElementCount(["apple", "orange", "apple", "banana", "apple", "orange"]));
 // { apple: 3, orange: 2, banana: 1}
 
 // ------------------------------------------------------------------------
