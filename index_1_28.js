@@ -19,31 +19,46 @@ function getLengthOfString(strings) {
 console.log(getLengthOfString(["Lion", "Shark", "Dog", "Cat"]));
 
 
+// 3. Write a function that takes an array of strings, and returns a new array of the lengths of strings longer than 5 characters
+ function findStringsLengthThanFive(strings) {
+    return getLengthOfString(getStringsLongerThanFive(strings));
+    // return strings.filter(str => str.length > 5).map(str => str.length);
+    // const arrayOfStringsLongerThanFive = [];
+    // for (let str of strings) {
+    //     if (str.length > 5) {
+    //         arrayOfStringsLongerThanFive.push(str.length);
+    //     }
+    // }
+    // return arrayOfStringsLongerThanFive;
+
+ }
+ console.log(findStringsLengthThanFive(["Marcus", "Paul", "Steven", "Jackson"]));
+
 
 // 2. Write a function that takes an array of strings and returns an array of strings longer than 5 characters (spaces count)
 
-
-// 3. Write a function that takes an array of strings, and returns a new array of the lengths of strings longer than 5 characters
 function getStringsLongerThanFive(strings) {
-    let newerArray = [];
-    for (let str of strings) {
-        if (str.length > 5) {
-            newerArray.push(str.length);
-        }
-    }
-    return newerArray;
+    return strings.filter(str => str.length > 5);
+    // let newerArray = [];
+    // for (let str of strings) {
+    //     if (str.length > 5) {
+    //         newerArray.push(str.length);
+    //     }
+    // }
+    // return newerArray;
 }
-console.log(getStringsLongerThanFive(["Marcus", "Michele", "Samuel"]));
+console.log(getStringsLongerThanFive(["Marc", "Marcus", "Michele", "Samuel"]));
 
-// 4. Write a function that takes an array of numbers and returns the sum of all even numebrs
+// 4. Write a function that takes an array of numbers and returns the sum of all even numbers
 function returnSumOfEvenNumbers(numbers) {
-    let sum = 0;
-    for (let num of numbers) {
-        if (num % 2 === 0) {
-            sum += num;
-        }
-    }
-    return sum;
+    return numbers.reduce((sum, num) => num % 2 === 0 ? sum + num : sum, 0);
+    // let sum = 0;
+    // for (let num of numbers) {
+    //     if (num % 2 === 0) {
+    //         sum += num;
+    //     }
+    // }
+    // return sum;
 }
 console.log(returnSumOfEvenNumbers([9,4,6,2,8,7,4,13]));
 
@@ -51,14 +66,16 @@ console.log(returnSumOfEvenNumbers([9,4,6,2,8,7,4,13]));
 
 // 5. Write a function that takes an array of numbers and returns the min num
 function findMinNumber (numbers) {
-    let minNumber = numbers[0];
-    for (let num of numbers) {
-        if (num < minNumber) {
-            minNumber = num;
+    return numbers.reduce((minNumber, num) => num < minNumber ? num : minNumber)
+    // return Math.min(...numbers)
+    // let minNumber = numbers[0];
+    // for (let num of numbers) {
+    //     if (num < minNumber) {
+    //         minNumber = num;
 
-        }
-        return minNumber;
-    }
+    //     }
+    //     return minNumber;
+    // }
 }
 console.log(findMinNumber([12,55,76,22,21]));
 
