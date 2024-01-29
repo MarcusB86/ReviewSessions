@@ -16,6 +16,7 @@ function getLengthOfString(strings) {
     }
     return newArray;
 }
+console.log(getLengthOfString(["Lion", "Shark", "Dog", "Cat"]));
 
 
 
@@ -32,8 +33,7 @@ function getStringsLongerThanFive(strings) {
     }
     return newerArray;
 }
-console.log()
-
+console.log(getStringsLongerThanFive(["Marcus", "Michele", "Samuel"]));
 
 // 4. Write a function that takes an array of numbers and returns the sum of all even numebrs
 function returnSumOfEvenNumbers(numbers) {
@@ -45,6 +45,8 @@ function returnSumOfEvenNumbers(numbers) {
     }
     return sum;
 }
+console.log(returnSumOfEvenNumbers([9,4,6,2,8,7,4,13]));
+
   
 
 // 5. Write a function that takes an array of numbers and returns the min num
@@ -58,6 +60,9 @@ function findMinNumber (numbers) {
         return minNumber;
     }
 }
+console.log(findMinNumber([12,55,76,22,21]));
 
 // 6. Write a function that takes in a string and returns the character that appears the most times (only letters count)
-function findFrequentChar(string)
+function findFrequentChar(string) {
+
+}
